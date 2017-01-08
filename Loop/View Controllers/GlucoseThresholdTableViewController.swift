@@ -29,7 +29,7 @@ final class GlucoseThresholdTableViewController: TextFieldTableViewController {
         unit = glucoseUnits.glucoseUnitDisplayString
 
         if let threshold = threshold {
-            value = NumberFormatter.glucoseFormatter(for: glucoseUnits).string(from: NSNumber(value: threshold))
+            value = GlucoseFormatter(glucoseUnits).string(threshold)
         }
 
     }

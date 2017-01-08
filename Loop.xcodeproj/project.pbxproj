@@ -168,7 +168,6 @@
 		4F7528A41DFE204900C322D6 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DE92501C541832001FFDE1 /* UIColor.swift */; };
 		4F7528A51DFE208C00C322D6 /* NSTimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439897341CD2F7DE00223065 /* NSTimeInterval.swift */; };
 		4F7528A71DFE20CE00C322D6 /* SensorDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EA28611D517E42001BC233 /* SensorDisplayable.swift */; };
-		4F7528A81DFE20CE00C322D6 /* NSNumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436A0E7A1D7DE13400D6475D /* NSNumberFormatter.swift */; };
 		4F7528A91DFE212600C322D6 /* GlucoseTrend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EA285E1D50ED3D001BC233 /* GlucoseTrend.swift */; };
 		4F7528AA1DFE215100C322D6 /* HKUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F526D5E1DF2459000A04910 /* HKUnit.swift */; };
 		4FC8C8011DEB93E400A1452E /* NSUserDefaults+StatusExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC8C8001DEB93E400A1452E /* NSUserDefaults+StatusExtension.swift */; };
@@ -180,6 +179,9 @@
 		C10428971D17BAD400DD539A /* NightscoutUploadKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C10428961D17BAD400DD539A /* NightscoutUploadKit.framework */; };
 		C11C87DD1E21E53500BB71D3 /* GlucoseThreshold.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178249D1E19B62300D9D25C /* GlucoseThreshold.swift */; };
 		C11C87DE1E21EAAD00BB71D3 /* HKUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F526D5E1DF2459000A04910 /* HKUnit.swift */; };
+		C11C87E01E22F78100BB71D3 /* GlucoseFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11C87DF1E22F78100BB71D3 /* GlucoseFormatter.swift */; };
+		C11C87E11E22F9B300BB71D3 /* GlucoseFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11C87DF1E22F78100BB71D3 /* GlucoseFormatter.swift */; };
+		C11C87E31E23011600BB71D3 /* NSNumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11C87E21E23011600BB71D3 /* NSNumberFormatter.swift */; };
 		C12F21A71DFA79CB00748193 /* recommend_tamp_basal_very_low_end_in_range.json in Resources */ = {isa = PBXBuildFile; fileRef = C12F21A61DFA79CB00748193 /* recommend_tamp_basal_very_low_end_in_range.json */; };
 		C15713821DAC6983005BC4D2 /* MealBolusNightscoutTreatment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15713811DAC6983005BC4D2 /* MealBolusNightscoutTreatment.swift */; };
 		C178249A1E1999FA00D9D25C /* CaseCountable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17824991E1999FA00D9D25C /* CaseCountable.swift */; };
@@ -190,7 +192,6 @@
 		C17824A61E1AF91F00D9D25C /* BolusRecommendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17824A41E1AD4D100D9D25C /* BolusRecommendation.swift */; };
 		C17884631D51A7A400405663 /* BatteryIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17884621D51A7A400405663 /* BatteryIndicator.swift */; };
 		C18C8C511D5A351900E043FB /* NightscoutDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18C8C501D5A351900E043FB /* NightscoutDataManager.swift */; };
-		C1C6591A1E1B1F430025CC58 /* NSNumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436A0E7A1D7DE13400D6475D /* NSNumberFormatter.swift */; };
 		C1C6591C1E1B1FDA0025CC58 /* recommend_temp_basal_dropping_then_rising.json in Resources */ = {isa = PBXBuildFile; fileRef = C1C6591B1E1B1FDA0025CC58 /* recommend_temp_basal_dropping_then_rising.json */; };
 		C1C73EF71DE3D0230022FC89 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C1C73EF91DE3D0230022FC89 /* InfoPlist.strings */; };
 		C1C73F021DE3D0250022FC89 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C1C73F041DE3D0250022FC89 /* Localizable.strings */; };
@@ -355,7 +356,6 @@
 		435400331C9F878D00D5819C /* SetBolusUserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetBolusUserInfo.swift; sourceTree = "<group>"; };
 		43649A621C7A347F00523D7F /* CollectionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionType.swift; sourceTree = "<group>"; };
 		436A0DA41D236A2A00104B24 /* LoopError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoopError.swift; sourceTree = "<group>"; };
-		436A0E7A1D7DE13400D6475D /* NSNumberFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSNumberFormatter.swift; sourceTree = "<group>"; };
 		436FACED1D0BA636004E2427 /* InsulinDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsulinDataSource.swift; sourceTree = "<group>"; };
 		43776F8C1B8022E90074EA36 /* Loop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Loop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43776F8F1B8022E90074EA36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AppDelegate.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -479,6 +479,8 @@
 		4FC8C8001DEB93E400A1452E /* NSUserDefaults+StatusExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSUserDefaults+StatusExtension.swift"; path = "Common/Extensions/NSUserDefaults+StatusExtension.swift"; sourceTree = "<group>"; };
 		4FF4D0FF1E18374700846527 /* WatchContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchContext.swift; sourceTree = "<group>"; };
 		C10428961D17BAD400DD539A /* NightscoutUploadKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NightscoutUploadKit.framework; path = Carthage/Build/iOS/NightscoutUploadKit.framework; sourceTree = "<group>"; };
+		C11C87DF1E22F78100BB71D3 /* GlucoseFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlucoseFormatter.swift; sourceTree = "<group>"; };
+		C11C87E21E23011600BB71D3 /* NSNumberFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSNumberFormatter.swift; sourceTree = "<group>"; };
 		C12F21A61DFA79CB00748193 /* recommend_tamp_basal_very_low_end_in_range.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recommend_tamp_basal_very_low_end_in_range.json; sourceTree = "<group>"; };
 		C15713811DAC6983005BC4D2 /* MealBolusNightscoutTreatment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealBolusNightscoutTreatment.swift; sourceTree = "<group>"; };
 		C17824991E1999FA00D9D25C /* CaseCountable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaseCountable.swift; sourceTree = "<group>"; };
@@ -882,7 +884,7 @@
 			isa = PBXGroup;
 			children = (
 				43DE92501C541832001FFDE1 /* UIColor.swift */,
-				436A0E7A1D7DE13400D6475D /* NSNumberFormatter.swift */,
+				C11C87E21E23011600BB71D3 /* NSNumberFormatter.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -891,6 +893,7 @@
 			isa = PBXGroup;
 			children = (
 				43EA28611D517E42001BC233 /* SensorDisplayable.swift */,
+				C11C87DF1E22F78100BB71D3 /* GlucoseFormatter.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1346,6 +1349,7 @@
 				43649A631C7A347F00523D7F /* CollectionType.swift in Sources */,
 				43F64DD91D9C92C900D24DC6 /* TitleSubtitleTableViewCell.swift in Sources */,
 				C15713821DAC6983005BC4D2 /* MealBolusNightscoutTreatment.swift in Sources */,
+				C11C87E11E22F9B300BB71D3 /* GlucoseFormatter.swift in Sources */,
 				435400321C9F745500D5819C /* BolusSuggestionUserInfo.swift in Sources */,
 				43E3449F1B9D68E900C85C07 /* StatusTableViewController.swift in Sources */,
 				43DBF0531C93EC8200B3C386 /* DeviceDataManager.swift in Sources */,
@@ -1442,7 +1446,6 @@
 				43E2D8DB1D20C03B004DA55F /* NSTimeInterval.swift in Sources */,
 				43E2D8D41D20BF42004DA55F /* DoseMathTests.swift in Sources */,
 				C11C87DE1E21EAAD00BB71D3 /* HKUnit.swift in Sources */,
-				C1C6591A1E1B1F430025CC58 /* NSNumberFormatter.swift in Sources */,
 				C17824A61E1AF91F00D9D25C /* BolusRecommendation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1474,12 +1477,13 @@
 				4FF4D0F91E17268800846527 /* IdentifiableClass.swift in Sources */,
 				4FF4D0F81E1725B000846527 /* NibLoadable.swift in Sources */,
 				4F7528AA1DFE215100C322D6 /* HKUnit.swift in Sources */,
+				C11C87E31E23011600BB71D3 /* NSNumberFormatter.swift in Sources */,
 				4F7528A91DFE212600C322D6 /* GlucoseTrend.swift in Sources */,
 				4F7528A71DFE20CE00C322D6 /* SensorDisplayable.swift in Sources */,
-				4F7528A81DFE20CE00C322D6 /* NSNumberFormatter.swift in Sources */,
 				4F2C15931E09BF2C00E160D4 /* HUDView.swift in Sources */,
 				4F7528A51DFE208C00C322D6 /* NSTimeInterval.swift in Sources */,
 				4F7528A41DFE204900C322D6 /* UIColor.swift in Sources */,
+				C11C87E01E22F78100BB71D3 /* GlucoseFormatter.swift in Sources */,
 				4F7528A11DFE200B00C322D6 /* BasalStateView.swift in Sources */,
 				4F7528A21DFE200B00C322D6 /* LevelMaskView.swift in Sources */,
 				4F7528A01DFE1F9D00C322D6 /* LoopStateView.swift in Sources */,

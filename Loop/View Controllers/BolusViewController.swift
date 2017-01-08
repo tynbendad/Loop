@@ -98,10 +98,9 @@ final class BolusViewController: UITableViewController, IdentifiableClass, UITex
 
     var eventualGlucose: GlucoseValue? = nil {
         didSet {
-            let formatter = NumberFormatter.glucoseFormatter(for: glucoseUnit)
-            if let bg = eventualGlucose,
-               let bgStr = formatter.string(from: NSNumber(value: bg.quantity.doubleValue(for: glucoseUnit))) {
-              eventualGlucoseDescription = String(format: NSLocalizedString("Eventually %@", comment: "The subtitle format describing eventual glucose. (1: localized glucose value description)"), bgStr + " " + glucoseUnit.glucoseUnitDisplayString)
+            let formatter = GlucoseFormatter(glucoseUnit)
+            if let bg = eventualGlucose {
+                eventualGlucoseDescription = String(format: NSLocalizedString("Eventually %@", comment: "The subtitle format describing eventual glucose. (1: localized glucose value description)"), formatter.describing(bg.quantity))
             } else {
                 eventualGlucoseDescription = nil
             }

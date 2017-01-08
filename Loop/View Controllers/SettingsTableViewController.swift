@@ -217,9 +217,9 @@ final class SettingsTableViewController: UITableViewController, DailyValueSchedu
 
                 if let insulinSensitivitySchedule = dataManager.insulinSensitivitySchedule {
                     let unit = insulinSensitivitySchedule.unit
-                    let value = valueNumberFormatter.string(from: NSNumber(value: insulinSensitivitySchedule.averageQuantity().doubleValue(for: unit))) ?? "—"
+                    let value = GlucoseFormatter(unit).describing(insulinSensitivitySchedule.averageQuantity())
 
-                    configCell.detailTextLabel?.text = String(format: NSLocalizedString("%1$@ %2$@/U", comment: "Format string for insulin sensitivity average (1: value)(2: glucose unit)"), value, unit.glucoseUnitDisplayString)
+                    configCell.detailTextLabel?.text = String(format: NSLocalizedString("%1$@/U", comment: "Format string for insulin sensitivity average (1: value)"), value, unit.glucoseUnitDisplayString)
                 } else {
                     configCell.detailTextLabel?.text = TapToSetString
                 }
@@ -229,10 +229,11 @@ final class SettingsTableViewController: UITableViewController, DailyValueSchedu
                 if let glucoseTargetRangeSchedule = dataManager.glucoseTargetRangeSchedule {
                     let unit = glucoseTargetRangeSchedule.unit
                     let value = glucoseTargetRangeSchedule.value(at: Date())
-                    let minTarget = valueNumberFormatter.string(from: NSNumber(value: value.minValue)) ?? "—"
-                    let maxTarget = valueNumberFormatter.string(from: NSNumber(value: value.maxValue)) ?? "—"
+                    let formatter = GlucoseFormatter(unit)
+                    let minTarget = formatter.string(value.minValue)
+                    let maxTarget = formatter.stringWithUnit(value.maxValue)
 
-                    configCell.detailTextLabel?.text = String(format: NSLocalizedString("%1$@ – %2$@ %3$@", comment: "Format string for glucose target range. (1: Min target)(2: Max target)(3: glucose unit)"), minTarget, maxTarget, unit.glucoseUnitDisplayString)
+                    configCell.detailTextLabel?.text = String(format: NSLocalizedString("%1$@ – %2$@ %3$@", comment: "Format string for glucose target range. (1: Min target)(2: Max target)"), minTarget, maxTarget)
                 } else {
                     configCell.detailTextLabel?.text = TapToSetString
                 }
@@ -240,8 +241,8 @@ final class SettingsTableViewController: UITableViewController, DailyValueSchedu
                 configCell.textLabel?.text = NSLocalizedString("Minimum BG Guard", comment: "The title text for the minimum bg guard setting")
                 
                 if let minimumBGGuard = dataManager.minimumBGGuard {
-                    let value = valueNumberFormatter.string(from: NSNumber(value: minimumBGGuard.value)) ?? "-"
-                    configCell.detailTextLabel?.text = String(format: NSLocalizedString("%1$@ %2$@", comment: "Format string for minimum bg guard. (1: value)(2: bg unit)"), value, minimumBGGuard.unit.glucoseUnitDisplayString)
+                    let value = GlucoseFormatter(minimumBGGuard.unit).stringWithUnit(minimumBGGuard.value)
+                    configCell.detailTextLabel?.text = String(format: NSLocalizedString("%1$@ %2$@", comment: "Format string for minimum bg guard. (1: value)"), value)
                 } else {
                     configCell.detailTextLabel?.text = TapToSetString
                 }

@@ -27,12 +27,8 @@ enum BolusRecommendationNotice: CustomStringConvertible, Equatable {
             timeFormatter.timeStyle = .short
             let time = timeFormatter.string(from: minGlucose.startDate)
 
-            let numberFormatter = NumberFormatter.glucoseFormatter(for: unit)
-
-            let minBGValue = numberFormatter.string(from: NSNumber(value: minGlucose.quantity.doubleValue(for: unit)))!
-
-            let minBGStr = "\(minBGValue) \(unit.glucoseUnitDisplayString)"
-
+            let glucoseFormatter = GlucoseFormatter(unit)
+            let minBGStr = glucoseFormatter.describing(minGlucose.quantity)
             return String(format: NSLocalizedString("Predicted glucose at %1$@ is %2$@.", comment: "Message when offering bolus prediction even though bg is below range and minBG is in future. (1: glucose time)(2: glucose number)"), time, minBGStr)
 
         }
